@@ -1,0 +1,35 @@
+<h1 class="text-center">WELCOME TO LETTERS AND NUMBERS</h1>
+
+<br>
+<form action="/game" class="text-center form-horizontal">
+  <div class="form-group">
+    <label for="gridsize">Enter the grid size</label>
+  </div>
+  <div class="form-group">
+    <input type="text" id="gridsize" name="gridsize" placeholder="Type a number between 1 and 26">
+  </div>
+  <div class="form-group">
+    <input type="submit" value="Grid generator" class="btn btn-primary">
+  </div>
+</form>
+
+<p class="text-center"><%= @grid %></p>
+<br>
+
+<form action="/score" class="text-center form-horizontal">
+  <div class="form-group">
+    <label for="attempt">Type your attempt here</label>
+  </div>
+  <div class="form-group">
+    <input type="text" id="attempt" name="attempt" placeholder="your word">
+  </div>
+    <div class="form-group">
+    <input type="hidden" name="grid" value="<%= @grid %>">
+  </div>
+  <div class="form-group">
+    <input type="hidden" name="start" value="<%= @start_time %>">
+  </div>
+  <div class="form-group">
+    <input type="submit" value="Submit" class="btn btn-primary">
+  </div>
+</form>

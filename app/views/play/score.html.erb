@@ -1,0 +1,20 @@
+<h1 class="header text-center">WELCOME TO LETTERS AND NUMBERS</h1>
+
+
+<div class="container text-center">
+
+  <h1>The Letters were:</h1>
+  <ul class="list-inline">
+    <% @grid.each do |letter| %>
+      <li><%= letter %></li>
+    <% end %>
+  </ul>
+
+  <h1>Your attempt</h1>
+  <h3><strong><%= @attempt %></strong></h3>
+
+  <h1>Your score is</h1>
+  <p><%= @result[0].round(2) %></p>
+
+  <p><strong><%= @result[1] %>!!<strong></p>
+</div>
